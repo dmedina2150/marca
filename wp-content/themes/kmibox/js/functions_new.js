@@ -18,8 +18,6 @@ var PLANES = [];
 
 jQuery(document).ready(function() {
 
-	// console.log( navigator.platform );
-
 	if(navigator.platform.substr(0, 2) == 'iP'){
 		jQuery("body").addClass('iOS');
 	}
@@ -237,6 +235,7 @@ function loadPresentaciones(){
 									'<div class="descripcion_producto_box">'+producto.descripcion+'</div>'+
 									'<div class="peso_producto_box">'+producto.peso+'</div>'+
 									'<div class="existencia_producto_box">'+existencia+'</div>'+
+									'<div class="title_producto_box">'+FN(producto.precio)+" MXN"+'</div>'+
 								'</div>'+
 							'</div>'+
 						'</div>';
@@ -286,10 +285,10 @@ function add_item_cart( index, ID, name, frecuencia, thumnbnail, price, descripc
 	HTML += '	 	<label class="resaltar_desglose solo_movil">'+frecuencia+'</label>';
 	HTML += '	 	<label class="solo_movil">$ '+price+' MXN</label>';
 	HTML += '	 </td>';
-	HTML += '	 <td class="solo_pc">';
+	HTML += '	 <td class="solo_pc center">';
 	HTML += '	 	<label class="resaltar_desglose">'+frecuencia+'</label>';
 	HTML += '	 </td>';
-	HTML += '	 <td class="solo_pc">';
+	HTML += '	 <td class="solo_pc center">';
 	HTML += '	 	<label>$ '+price+' MXN</label>';
 	HTML += '	 </td>';
 	HTML += '	 <td class="">';
@@ -300,7 +299,7 @@ function add_item_cart( index, ID, name, frecuencia, thumnbnail, price, descripc
 	HTML += '	 	</div>';
 	HTML += '	 	<div class="resaltar_desglose solo_movil total_en_cantidad" style="text-align: center; width: 100%;">$ '+(price*cantidad)+' MXN</div>';
 	HTML += '	 </td>';
-	HTML += '	 <td class="solo_pc">';
+	HTML += '	 <td class="solo_pc center">';
 	HTML += '	 	<label class="resaltar_desglose">$ '+(price*cantidad)+' MXN</label>';
 	HTML += '	 </td>';
 	HTML += '</tr>';

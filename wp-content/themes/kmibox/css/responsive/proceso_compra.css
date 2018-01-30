@@ -154,6 +154,22 @@
 		#presentaciones .peso_producto_box {
 		    font-size: 18px;
 		}
+
+
+
+	#desglose th span {
+	    display: block;
+	    text-align: center;
+	    background-color: #181E0D;
+	    color: #FFF;
+	    padding: 3px 10px;
+	    text-transform: uppercase;
+	    margin: 2px 2px 0px;
+	}
+
+	#desglose th * {
+	    font-size: 9px;
+	}
 }
 
 @media (max-width: 780px){

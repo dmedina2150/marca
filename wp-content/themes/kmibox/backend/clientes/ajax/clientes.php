@@ -9,6 +9,8 @@
 
 	$clientes = $wpdb->get_results("SELECT * FROM wp_users ORDER BY ID DESC");
 
+	$data["data"] = array();
+
 	foreach ($clientes as $cliente) {
 
 		$_metadata = get_user_meta($cliente->ID);
@@ -29,7 +31,7 @@
 		$data["data"][] = array(
 	        $cliente->ID,
 	        date("d/m/Y", strtotime($cliente->user_registered)),
-	        $metadata[ "first_name" ]." ".$metadata[ "last_name" ],
+	        "<a href='".get_home_url()."/?i=".md5($_SESSION['id_admin'])."' target='_blank'>".$metadata[ "first_name" ]." ".$metadata[ "last_name" ]."</a>",
 	        $cliente->user_email,
 	        $metadata[ "telef_movil" ],
 	        strtoupper( $donde ),

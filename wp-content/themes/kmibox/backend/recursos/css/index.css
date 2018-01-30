@@ -38,6 +38,11 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination {
     margin: 10px 0 0 !important;
 }
 
+input.readonly, input[readonly], textarea.readonly, textarea[readonly] {
+    background-color: #f6f6f6;
+    border: solid 1px #CCC;
+}
+
 .enlaces {
 	color: #158acd;
 	cursor: pointer;
@@ -150,7 +155,6 @@ a:focus, a:focus .media-icon img {
 {
     width: 100%;
     box-sizing: border-box;
-    padding: 5px;
 }
 
 .celdas_1,

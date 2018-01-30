@@ -11,7 +11,7 @@
 	    function addImgPath($HTML){
 	    	$PATH = TEMA()."/imgs/mails/";
 	    	/* TODO: quitar al pasar a produccion */
-	    	$PATH = "http://nutriheroes.com.mx/QA/wp-content/themes/kmibox/imgs/mails/";
+	    	$PATH = "http://nutriheroes.com.mx/marca/wp-content/themes/kmibox/imgs/mails/";
 	    	return str_replace('[IMG_PATH]', $PATH, $HTML);
 	    }
 	}

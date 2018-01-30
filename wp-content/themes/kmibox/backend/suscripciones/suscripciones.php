@@ -17,11 +17,7 @@
                 <th>ID</th>
                 <th>Fecha suscripci&oacute;n</th>
                 <th>Cliente</th>
-                <th>Producto</th>
-                <th>Tama&ntilde;o</th>
-                <th>Edad</th>
-                <th>Presentaci&oacute;n</th>
-                <th>Plan</th>
+                <th>Producto(s)</th>
                 <th>Proximo Cobro</th>
                 <th>Status</th>
             </tr>

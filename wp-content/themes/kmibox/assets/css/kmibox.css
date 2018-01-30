@@ -472,7 +472,7 @@ select{
 .LoginNuevo{
 background-color: #0b1706;
 height: 850px;
-margin-top: -34%;
+margin-top: -40%;
 }
 
 #tophome{
@@ -531,7 +531,7 @@ margin-top: -34%;
 	background: #181E0D;
 	font-family: cursive;
 	background-size: contain;
-	padding: 45px 0px 45px 0px;
+	padding: 35px 0px 35px 0px;
 }
 
 #section-comment1{
@@ -1446,11 +1446,40 @@ margin-bottom: 10% !important;
 	margin-top: 10% !important;
 
 }
+
+.headerResponsive{
+	 margin-right: 0% ! important; 
+    margin-top: -4% ! important;
+	}
+
+.headerResponsive-img {
+    margin-right: 0% ! important;
+    margin-top: -5% ! important;
+    margin-left: -2%;
+}	
 	.col-xs-6-1{
-		    width: 60% !important;
+		    width: 45% !important;
 	}
 
 }
+
+@media all and (min-width: 1025px)  {
+	.headerResponsive{
+	 margin-right: 0% ! important; 
+    margin-top: -3% ! important;
+	}
+
+	.headerResponsive-img {
+    margin-right: 0% ! important;
+    margin-top: -5% ! important;
+    margin-left: -2%;
+	}	
+	.col-xs-6-1{
+		    width: 48% !important;
+	}
+}
+
+
 @media all and (max-width:959px) and (min-width:613px) {
 	.h-3x{
 		font-size: 20px;

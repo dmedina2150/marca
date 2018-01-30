@@ -31,47 +31,6 @@
     $nombre = get_user_meta($user_id, "first_name", true)." ".get_user_meta($user_id, "last_name", true);
     $openpay_cliente_id = get_user_meta($user_id, "openpay_id", true);
 
-    /*
-    $fechas = getFechas();
-    $desde = strtotime('+7 day');
-    $hasta = strtotime('+10 day');
-    $fecha_estimada = 
-    	$fechas["semana"][ date('N', $desde) ]." ".date('d', $desde)." de ".$fechas["meses"][ date('n', $desde) ]." - ".
-    	$fechas["semana"][ date('N', $hasta) ]." ".date('d', $hasta)." de ".$fechas["meses"][ date('n', $hasta) ];
-    $_metas_user = get_user_meta($user_id);
-    $metas_user = array();
-    foreach ($_metas_user as $key => $value) {
-    	$metas_user[ $key ] = $value[0];
-    }
-    $estado = utf8_decode( $wpdb->get_var("SELECT name FROM wp_estados WHERE id = ".$metas_user["dir_estado"]) );
-    $municipio = utf8_decode( $wpdb->get_var("SELECT name FROM wp_municipios WHERE id = ".$metas_user["dir_ciudad"]) );
-    $direccion = '
-    	<div> '.$nombre.' </div>
-		<div> '.$metas_user[ "dir_colonia" ].' '.$metas_user[ "dir_numext" ].', interior '.$metas_user[ "dir_numint" ].' </div>
-		<div> '.$metas_user[ "dir_calle" ].' </div>
-		<div> '.$estado.', '.$municipio.' '.$metas_user[ "dir_codigo_postal" ].' </div>
-		<div> M&eacute;xico </div>
-    ';
-    $hoy = time();
-    $realizado = $fechas["semana"][ date('N', $hoy) ]." ".date('d', $hoy)." de ".$fechas["meses"][ date('n', $hoy) ];
-    $pedido = "0001111";
-    */
-    
- 	/*
- 	$productos = "";
- 	foreach ($CARRITO["productos"] as $key => $value) {
- 		if( $value != "" ){
-	 		$temp = getTemplate("/compra/nuevo/partes/producto");
-	 		$temp = str_replace("[IMG_PRODUCTO]", TEMA()."/imgs/productos/".$_productos[ $value->producto ]["dataextra"]["img"], $temp);
-	 		$temp = str_replace("[NOMBRE]", $_productos[ $value->producto ]["nombre"], $temp);
-	 		$temp = str_replace("[DESCRIPCION]", $_productos[ $value->producto ]["descripcion"], $temp);
-	 		$temp = str_replace("[PLAN]", $value->plan, $temp);
-	 		$temp = str_replace("[PRECIO]", number_format($value->precio, 2, ',', '.'), $temp);
-	 		$productos .= $temp;
-	 	}
- 	}
- 	*/
-
  	try {
 	 	$openpay = Openpay::getInstance($dataOpenpay["MERCHANT_ID"], $dataOpenpay["OPENPAY_KEY_SECRET"]);
 

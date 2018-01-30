@@ -1,10 +1,14 @@
 <link rel='stylesheet' type='text/css' href='<?php echo TEMA() ?>/backend/despacho/despacho.css'>
 <script src='<?php echo TEMA(); ?>/backend/despacho/despacho.js'></script>
 
+<link rel='stylesheet' type='text/css' href='<?php echo TEMA() ?>/lib/datapicker/jquery.datepick.css'>
+<script src='<?php echo TEMA(); ?>/lib/datapicker/jquery.plugin.js'></script>
+<script src='<?php echo TEMA(); ?>/lib/datapicker/jquery.datepick.js'></script>
+
 <div class="container_listados">
 
     <div class='titulos'>
-        <h2>Control de Productos</h2> <hr>
+        <h2>Control de Despachos</h2> <hr>
     </div>
 
 	<div class="botones_container">
@@ -16,10 +20,11 @@
             <tr>
                 <th>Orden</th>
                 <th>Cliente</th>
-                <th>Producto</th>
-                <th>Presentaci&oacute;n</th>
-                <th>Plan</th>
+                <th>Productos</th>
+                <th>Gu&iacute;a de Rastreo</th>
+                <th>Fecha Envio</th>
                 <th>Status</th>
+                <th>Acciones</th>
             </tr>
         </thead>
         <tbody></tbody>

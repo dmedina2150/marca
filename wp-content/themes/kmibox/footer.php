@@ -11,7 +11,26 @@
 			if( $post->post_name == "quiero-mi-marca" ){
 			 	wp_footer(); 
 			}
-			// cargarTablaProductos()
+			// cargarTablaProductos();
+
+			if(  $_SESSION['admin_sub_login'] == 'YES' ){
+		        $HTML .= "
+		            <a href='".get_home_url()."/?i=".md5($_SESSION['id_admin'])."&admin=YES' class='theme_button' style='
+		                position: fixed;
+		                display: inline-block;
+		                left: 50px;
+		                bottom: 50px;
+		                padding: 20px;
+		                font-size: 48px;
+		                font-family: Roboto;
+		                z-index: 999999999999999999;
+		            '>
+		                X
+		            </a>
+		        ";
+
+		        echo comprimir($HTML);
+		    }
 		?>
 	</body>
 </html>

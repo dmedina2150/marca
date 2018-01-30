@@ -12,6 +12,10 @@ div#wpadminbar {
     display: none !important;
 }
 
+.center{
+	text-align: center;
+}
+
 .col-xs-12, .col-md-6, .col-md-12 {
     position: relative;
     min-height: 1px;
@@ -83,7 +87,7 @@ div#wpadminbar {
 
 #vlz_controles_fases > span > span {
 	position: absolute;
-    left: -55px;
+    left: -60px;
     top: -4px;
     font-weight: 600;
     font-size: 13px;    
@@ -461,7 +465,6 @@ div#wpadminbar {
 	    display: block;
 	    vertical-align: middle;
 	    text-align: center;
-	    padding-bottom: 10px;
 	}
 
 	.cantidad_controls label {
@@ -484,6 +487,7 @@ div#wpadminbar {
 	    background-color: #FFF;
 	    box-shadow: 1px 5px 10px #8c8c8c;
 	    max-width: 900px;
+        padding-right: 5px;
 	}
 
 	table {
@@ -502,7 +506,7 @@ div#wpadminbar {
 	    color: #FFF;
 	    padding: 3px 20px;
 	    text-transform: uppercase;
-	    margin: 5px;
+	    margin: 2px;
 	}
 
 	body.iOS #desglose th span{
@@ -518,7 +522,7 @@ div#wpadminbar {
 	}
 
 	#desglose td {    
-	    /*padding: 10px 20px;*/
+	    padding: 10px 5px;
 	}
 
 	#desglose td hr {        

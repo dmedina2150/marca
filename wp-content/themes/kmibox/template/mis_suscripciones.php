@@ -1,53 +1,6 @@
 <?php
-	
+
 	$mis_suscripciones = getSuscripciones();
-
-	$carrusel = ""; $W = 0;
-	$inicial = array();
-	if( count($mis_suscripciones) > 0 ){
-		foreach ($mis_suscripciones as $orden_id => $planes) {
-			foreach ($planes["productos"] as $suscripcion) {
-				$id_suscripcion = str_pad($suscripcion["orden"], 5, "0", STR_PAD_LEFT);
-
-				$activo = "";
-				if( count($inicial) == 0 ){
-					$inicial = array(
-						"plan" => $suscripcion["plan"],
-						"type" => "{$suscripcion["nombre"]} {$suscripcion["presentacion"]}",
-						"status" => "{$suscripcion["status"]}",
-						"entrega" => "{$suscripcion["entrega"]}",
-						"img" => "{$suscripcion["img"]}",
-						"entregados" => $suscripcion["entredagos"]
-					);
-					$activo = "item_activo";
-				}
-
-				$carrusel .= "
-					<div 
-						id='plan_{$id_suscripcion}' 
-						data-plan='{$suscripcion["plan"]}'
-						data-type='{$suscripcion["nombre"]} {$suscripcion["presentacion"]}'
-						data-status='{$suscripcion["status"]}'
-						data-entrega='{$suscripcion["entrega"]}'
-						data-img='{$suscripcion["img"]}'
-						data-entregados='{$suscripcion["entredagos"]}'
-						class='suscripcion_item {$activo} slide' 
-						data-scale='small' 
-						data-position='top'
-					>
-						<div>
-							<div class='item_carrusel_orden'> <strong>Orden:</strong> {$id_suscripcion} </div>
-							<div class='item_carrusel_img' style='background-image: url({$suscripcion["img"]});'></div>
-							<div class='item_carrusel_total'>
-								{$suscripcion["nombre"]}
-							</div>
-						</div>
-					</div>
-				";
-				$W++;
-			}
-		}
-	}
 
 	$mis_despachos = getDespachosActivos();
 	$despacho_inicial = array();
@@ -89,21 +42,32 @@
 		}
 	}
 
+	
+	$ordenes = getOrdenes();
+
 /*	echo "<pre>";
-		print_r($inicial);
+		print_r($ordenes);
 	echo "</pre>";*/
 
+	$opciones = "";
+	foreach ($ordenes as $key => $value) {
+		$opciones .= "<option value={$value->id}>Orden: {$value->id}</option>";
+	}
 
 	if( count($mis_suscripciones) > 0 ){
 		$HTML .= '
 			<section id="tab_2" class="section_activo">
 				<div class="section_box">
+
+					<div class="selector_container">
+						<div class="titulo_selector">Seleccionar Suscripción:</div>
+						<select id="selector_suscripcion" class="selector">'.$opciones.'</select>
+					</div>
+
 					<div class="carrusel_suscripciones_box">
 						<div class="carrusel_suscripciones_container_general">
-							<label class="gothan">Selecciona un suscripci&oacute;n</label>
-							<div class="carrusel_suscripciones_container slider_suscripciones">
-								'.$carrusel.'
-							</div>
+							<label class="gothan">Productos de tu suscripci&oacute;n</label>
+							<div class="carrusel_suscripciones_container slider_suscripciones"></div>
 						</div>
 						<div class="img_grande">
 							<div class="">

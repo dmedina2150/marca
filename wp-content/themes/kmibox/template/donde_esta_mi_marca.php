@@ -4,6 +4,12 @@
 		$HTML .= '
 		<section id="tab_3">
 			<div class="section_box">
+
+				<div class="selector_container">
+					<div class="titulo_selector">Seleccionar Suscripción:</div>
+					<select id="selector_despachos" class="selector">'.$opciones.'</select>
+				</div>
+					
 				<div class="carrusel_suscripciones_box">
 					<div class="carrusel_suscripciones_container_general">
 						<label class="gothan">Selecciona un suscripci&oacute;n</label>

@@ -26,6 +26,8 @@
 		$ciudades[ $origen->id ] = $origen->ciudad; 
 	}
 
+	$data["data"] = array();
+
 	foreach ($productos as $producto) {
 
 		$dataextra = unserialize( $producto->dataextra );

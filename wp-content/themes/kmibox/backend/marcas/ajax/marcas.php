@@ -17,6 +17,8 @@
 		$tipos[ $tipo->id ] = $tipo->tipo;
 	}
 
+	$data["data"] = array();
+
 	foreach ($marcas as $marca) {
 
 		$img = TEMA()."/imgs/marcas/".$marca->img;
